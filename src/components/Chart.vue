@@ -20,9 +20,10 @@ export default {
   components: {
     VueApexCharts,
   },
+
   computed: {
     getType() {
-      if (this.type === "Humadity") {
+      if (this.type === "Wilgotoność") {
         return "bar";
       } else {
         return "line";
@@ -36,12 +37,13 @@ export default {
       console.log(info);
     },
   },
+
   watch: {
     info(value) {
       this.updateChart(value);
       this.options = {
         title: {
-          text: this.type + " for " + this.title,
+          text: this.type + " dla " + this.title,
         },
         yaxis: {
           title: {
@@ -49,12 +51,10 @@ export default {
           },
         },
         xaxis: {
-          title: {
-            text: "data",
-          },
         },
       };
-      if (this.type === "Humadity") {
+
+      if (this.type === "Wilgotoność") {
         this.series = [
           {
             data: [
@@ -89,7 +89,7 @@ export default {
         this.options = {
           type: "line",
           title: {
-            text: this.type + " for " + this.title,
+            text: this.type + " dla " + this.title,
           },
           yaxis: {
             title: {
@@ -97,9 +97,6 @@ export default {
             },
           },
           xaxis: {
-            title: {
-              text: "data",
-            },
           },
           colors: ["#F44336", "#E91E63", "#9C27B0"],
         };
@@ -136,7 +133,9 @@ export default {
       }
     },
   },
+
   props: ["info", "title", "type"],
+
   data() {
     return {
       information: "",
@@ -186,6 +185,7 @@ export default {
   max-width: 600px;
   margin: 150px auto;
 }
+
 #chart {
   height: 200px;
 }

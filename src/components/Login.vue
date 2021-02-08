@@ -24,6 +24,7 @@
           <v-text-field
             v-model="password1"
             outlined
+            type="password"
             required
             placeholder="Hasło"
           ></v-text-field>

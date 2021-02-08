@@ -1,14 +1,16 @@
 <template>
-  <div class="col-8 col-md-6 col-lg-4 col-xl-3  content">
-    <p @click="cancel" class="cancel">&#10008;</p>
-    <header>Add city</header>
-    <v-text-field
-      v-model="city"
-      outlined
-      required
-      placeholder="City"
-    ></v-text-field>
-    <button @click="addCity" class="btn btn-primary">Add</button>
+  <div class="col-8 col-md-6 col-lg-4 col-xl-3 wrapper-content">
+    <div class="content">
+      <p @click="cancel" class="cancel">&#10008;</p>
+      <header>Dodaj miasto</header>
+      <v-text-field
+          v-model="city"
+          outlined
+          required
+          placeholder="City"
+      ></v-text-field>
+      <button @click="addCity" class="btn btn-primary">Dodaj</button>
+    </div>
   </div>
 </template>
 <script>
@@ -31,31 +33,40 @@ export default {
 };
 </script>
 <style scoped>
-.content {
-  height: 30vh;
+.wrapper-content {
   border-radius: 30px;
   background-color: #90e0ef;
   position: fixed;
+  padding: 0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.content {
+  position: relative;
+}
+
 .v-text-field {
   left: 50%;
   transform: translateX(-50%);
-  width: 75%;
-  top: 40%;
+  width: 80%;
+  margin-top: 30px;
 }
 
 .btn {
-  position: absolute;
+  position: relative;
   bottom: 6%;
-  width: 45%;
+  width: 80%;
   left: 50%;
   transform: translateX(-50%);
+  text-transform: uppercase;
+  font-size: 23px;
+  font-weight: 500;
+  margin-bottom: 30px;
 }
 header {
-  position: absolute;
+  position: relative;
   border-top-left-radius: 30px;
   width: 100%;
   text-align: center;

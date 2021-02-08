@@ -28,24 +28,27 @@ export default {
 <style scoped>
 .cloud {
   padding: 10px 5px 20px 5px;
-  background-color: #06d6a0;
+  background-color: #228AEA;
   cursor: pointer;
-  border-radius: 30%;
+  border-radius: 5%;
   margin: 20px 5px 20px 5px;
+  box-shadow: 1px 1px 3px 4px #228AEA;
 }
+
 img {
   display: block;
   margin: 0 auto;
-  transform: scale(1.5);
 }
+
 p {
-  color: #d90429;
+  color: #DDD;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   padding: 0;
   margin: 0;
   font-size: 22px;
   text-align: center;
 }
+
 .name-city {
   text-transform: capitalize;
   font-size: 30px;

@@ -5,7 +5,7 @@
         @click="logOut"
         class="logout col-8 col-md-6 col-lg-4 col-xl-3 text-center"
       >
-        Log out
+        Wyloguj się
       </button>
     </div>
     <section class="col-xs-11 col-sm-10 col-lg-8 mt-3  mx-auto pb-2 mb-3 ">
@@ -14,12 +14,12 @@
           :title="whichCityClicked"
           v-if="isClicked"
           :info="infoOneCity"
-          type="Temperature"
+          type="Temperatura"
         ></Chart>
         <Chart
           :title="whichCityClicked"
           v-if="isClicked"
-          type="Humadity"
+          type="Wilgotoność"
           :info="infoOneCity"
         ></Chart>
       </div>
@@ -33,7 +33,7 @@
           @btnAddCity="addCity"
         ></DialogComponent>
         <button @click="showAddCity" type="button" class="btn btn-primary">
-          Add city
+          Dodaj miasto
         </button>
         <Cities
           @tapCity="onSelectCity"
@@ -200,8 +200,13 @@ section {
 ::-webkit-scrollbar-thumb:hover {
   background: #0069d9;
 }
+
 .btn {
   width: 100%;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  font-size: 23px;
+  font-weight: 500;
 }
 
 section div.charts {
@@ -240,7 +245,9 @@ section div.cities {
 .logout {
   text-transform: uppercase;
   border: 1px tomato solid;
-  padding: 20px;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: 500;
   color: white;
   border-radius: 20px;
   background-color: tomato;

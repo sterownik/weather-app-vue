@@ -4,6 +4,8 @@ export async function getDaysWeather(city) {
       city +
       "&appid=29a4e59f8b934372bf883d2a4e6c18a2&units=metric"
   );
+
   const cities = await response.json();
+
   return cities;
 }
